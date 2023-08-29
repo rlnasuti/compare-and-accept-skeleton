@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "compare-and-accept-skeleton"
+version = "0.1.0"
+description = ""
+authors = ["Robert Nasuti <rlnasuti@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "compare_and_accept_skeleton"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.3"
+pandas = "^2.0.3"
+beautifulsoup4 = "^4.12.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

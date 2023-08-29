@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Application</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+</head>
+<body>
+    <div style="display: flex;">
+        <div style="width: 50%;">
+            <h2>HTML Content</h2>
+            {{ html_content|safe }}
+        </div>
+        <div style="width: 50%;">
+            <h2>Processed Data</h2>
+            <table id="data" class="data">
+                {{ table|safe }}
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready( function () {
+            $('#data').DataTable();
+        });
+    </script>
+</body>
+</html>
